@@ -2,7 +2,6 @@
   "private": true,
   "name": "@acme/app-mobile",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "dev": "expo start",
     "lint": "eslint --ext js,ts,tsx .",
@@ -18,6 +17,7 @@
     "@expo/metro-runtime": "^3.2.1",
     "expo": "^51.0.17",
     "expo-dev-client": "~4.0.19",
+    "expo-router": "~3.5.17",
     "expo-status-bar": "~1.12.1",
     "expo-updates": "~0.25.18",
     "react": "18.2.0",
