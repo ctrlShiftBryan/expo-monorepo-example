@@ -1,5 +1,5 @@
 import { HomeMessage, HomeMessageIcon } from '@acme/feature-home';
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, Text } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -17,6 +17,7 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
+        <Text className="text-red-500 text-xl font-bold">Hello from Nativewind</Text>
         <ThemedText>
           <HomeMessage />
         </ThemedText>

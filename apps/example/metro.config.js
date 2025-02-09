@@ -1,6 +1,7 @@
 // Learn more https://docs.expo.dev/guides/monorepos
 const { getDefaultConfig } = require('expo/metro-config');
 const { FileStore } = require('metro-cache');
+const { withNativeWind } = require('nativewind/metro');
 const path = require('path');
 
 // Create the default Expo config for Metro
@@ -24,4 +25,4 @@ config.cacheStores = [
   new FileStore({ root: path.join(__dirname, 'node_modules', '.cache', 'metro') }),
 ];
 
-module.exports = config;
+module.exports = withNativeWind(config, { input: './global.css' });
