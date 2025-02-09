@@ -74,5 +74,15 @@
       "nativewind",
       "nativewind/styled"
     ]
+  },
+  "dependencies": {
+    "@rn-primitives/slot": "^1.1.0",
+    "@rn-primitives/types": "^1.1.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react-native": "^0.475.0",
+    "react-native-svg": "^15.11.1",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
