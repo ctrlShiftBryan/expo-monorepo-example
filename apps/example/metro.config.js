@@ -36,6 +36,7 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
 
     // Try to resolve from each workspace package
     for (const pkg of workspacePackages) {
+      // First try with the exact path
       const pkgPath = path.resolve(workspaceRoot, pkg, relativePath);
       if (fs.existsSync(pkgPath)) {
         return {
@@ -44,11 +45,20 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
         };
       }
 
-      // Also try with .tsx extension
+      // Try with .tsx extension
       const pkgPathWithExt = path.resolve(workspaceRoot, pkg, `${relativePath}.tsx`);
       if (fs.existsSync(pkgPathWithExt)) {
         return {
           filePath: pkgPathWithExt,
+          type: 'sourceFile',
+        };
+      }
+
+      // Try with .ts extension
+      const pkgPathWithTsExt = path.resolve(workspaceRoot, pkg, `${relativePath}.ts`);
+      if (fs.existsSync(pkgPathWithTsExt)) {
+        return {
+          filePath: pkgPathWithTsExt,
           type: 'sourceFile',
         };
       }
@@ -69,6 +79,15 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
     if (fs.existsSync(localPathWithExt)) {
       return {
         filePath: localPathWithExt,
+        type: 'sourceFile',
+      };
+    }
+
+    // Also try with .ts extension for local path
+    const localPathWithTsExt = `${localPath}.ts`;
+    if (fs.existsSync(localPathWithTsExt)) {
+      return {
+        filePath: localPathWithTsExt,
         type: 'sourceFile',
       };
     }

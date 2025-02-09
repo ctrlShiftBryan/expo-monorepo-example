@@ -1,6 +1,6 @@
-import { Paragraph, Test, Button } from '@acme/ui';
+import { Paragraph, Test, Button, Text } from '@acme/ui';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { HomeMessage } from '@acme/feature-home';
 
 export default function HomeScreen() {
@@ -10,12 +10,24 @@ export default function HomeScreen() {
       <Paragraph className="text-blue-500">Hello from UI</Paragraph>
       <Test />
       <HomeMessage />
-      <Button>Primary</Button>
-      <Button variant="destructive">Destructive</Button>
-      <Button variant="secondary">Secondary</Button>
-      <Button variant="outline">Outline</Button>
-      <Button variant="ghost">Ghost</Button>
-      <Button variant="link">Link</Button>
+      <Button>
+        <Text>Primary</Text>
+      </Button>
+      <Button variant="destructive">
+        <Text>Destructive</Text>
+      </Button>
+      <Button variant="secondary">
+        <Text>Secondary</Text>
+      </Button>
+      <Button variant="outline">
+        <Text>Outline</Text>
+      </Button>
+      <Button variant="ghost">
+        <Text>Ghost</Text>
+      </Button>
+      <Button variant="link">
+        <Text>Link</Text>
+      </Button>
     </View>
   );
 }
