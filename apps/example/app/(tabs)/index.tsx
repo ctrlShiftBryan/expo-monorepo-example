@@ -1,4 +1,4 @@
-import { Paragraph } from '@acme/ui';
+import { Paragraph, Test } from '@acme/ui';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen() {
@@ -6,6 +6,7 @@ export default function HomeScreen() {
     <View>
       <Text className="text-red-500 text-xl font-bold">Hello from Nativewind</Text>
       <Paragraph className="text-blue-500">Hello from UI</Paragraph>
+      <Test />
     </View>
   );
 }
