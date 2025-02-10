@@ -1,6 +1,6 @@
 import { Paragraph, Test, Button, Text } from '@acme/ui';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { HomeMessage } from '@acme/feature-home';
 
 export default function HomeScreen() {
