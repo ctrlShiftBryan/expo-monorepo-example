@@ -19,7 +19,8 @@
     "build": "tsup --clean"
   },
   "dependencies": {
-    "@acme/ui": "workspace:*"
+    "@acme/ui": "workspace:*",
+    "nativewind": "^4.1.23"
   },
   "devDependencies": {
     "@acme/eslint-config": "workspace:*",
@@ -41,7 +42,8 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-web": "*"
+    "react-native-web": "*",
+    "nativewind": "*"
   },
   "peerDependenciesMeta": {
     "react-native": {
@@ -71,7 +73,9 @@
     "external": [
       "react",
       "react-native",
-      "react-native-web"
+      "react-native-web",
+      "nativewind",
+      "nativewind/styled"
     ]
   }
 }
