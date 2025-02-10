@@ -1,0 +1,19 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    name: Run ESLint
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 🏗 Setup monorepo
+        uses: ./.github/actions/setup-monorepo
+        
+      - name: Run ESLint
+        run: pnpm lint

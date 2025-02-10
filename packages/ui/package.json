@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "dev": "tsup --watch --silent",
-    "lint": "eslint --ext js,ts,tsx .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "jest",
     "build": "tsup --clean"
   },

@@ -1,6 +1,6 @@
 import { Text, TextProps, View } from 'react-native';
 
-export const Paragraph = ({ children, style, ...props }: TextProps) => {
+export const Paragraph = ({ children, ...props }: TextProps) => {
   return (
     <View>
       <Text {...props}>{children}</Text>
