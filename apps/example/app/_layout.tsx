@@ -42,6 +42,17 @@ export default function RootLayout() {
     hasMounted.current = true;
   }, []);
 
+  // Add effect for dark mode class
+  useIsomorphicLayoutEffect(() => {
+    if (Platform.OS === 'web') {
+      if (isDarkColorScheme) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  }, [isDarkColorScheme]);
+
   React.useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
